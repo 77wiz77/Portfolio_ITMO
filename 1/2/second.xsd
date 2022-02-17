@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="графика">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="эллипс" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="id" use="required" />
+                  <xs:attribute name="заливка" use="required" />
+                  <xs:attribute name="ободок" use="required" />
+                  <xs:attribute name="ширина-ободка" type="xs:integer" use="required" />
+                  <xs:attribute name="cx" type="xs:integer" use="required" />
+                  <xs:attribute name="cy" type="xs:integer" use="required" />
+                  <xs:attribute name="rx" type="xs:integer" use="required" />
+                  <xs:attribute name="ry" type="xs:integer" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="ширина" type="xs:integer" use="required" />
+            <xs:attribute name="высота" type="xs:integer" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
