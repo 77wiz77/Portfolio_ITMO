@@ -1,55 +1,25 @@
-<math xmlns="http://www.w3.org/1999/XSL/Transform" version="1.0" display="block">
-  <mrow>
-    <mi>&#x3C3;</mi>
-    <mo>=</mo>
-    <msqrt>
-      <mrow>
-        <mfrac>
-          <mrow>
-            <mn>1</mn>
-          </mrow>
-          <mrow>
-            <mi>N</mi>
-          </mrow>
-        </mfrac>
-        <mrow>
-          <munderover>
-            <mrow>
-              <mo>&#x2211;</mo>
-            </mrow>
-            <mrow>
-              <mi>i</mi>
-              <mo>=</mo>
-              <mn>1</mn>
-            </mrow>
-            <mrow>
-              <mi>N</mi>
-            </mrow>
-          </munderover>
-          <mrow>
-            <msup>
-              <mrow>
-                <mo>(</mo>
-                <msub>
-                  <mrow>
-                    <mi>x</mi>
-                  </mrow>
-                  <mrow>
-                    <mi>i</mi>
-                  </mrow>
-                </msub>
-                <mo>&#x2212;</mo>
-                <mi>&#x3BC;</mi>
-                <mo>)</mo>
-              </mrow>
-              <mrow>
-                <mn>2</mn>
-              </mrow>
-            </msup>
-          </mrow>
-        </mrow>
-      </mrow>
-    </msqrt>
-    <mo>.</mo>
-  </mrow>
-</math>
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <xsl:template match="root/графика">
+    <html>
+      <body>
+        <xsl:attribute name="width"><xsl:value-of select="@строка"/></xsl:attribute>
+        <xsl:attribute name="height"><xsl:value-of select="@высота"/></xsl:attribute>
+        <xsl:for-each select="строка">
+          <ellipse>
+            <xsl:attribute name="fill"><xsl:value-of select="@заливка"/></xsl:attribute>
+            <xsl:attribute name="stroke"><xsl:value-of select="@ободок"/></xsl:attribute>
+            <xsl:attribute name="width-stroke"><xsl:value-of select="@ширина-ободка"/></xsl:attribute>
+            <xsl:attribute name="cx"><xsl:value-of select="@cx"/></xsl:attribute>
+            <xsl:attribute name="cy"><xsl:value-of select="@cy"/></xsl:attribute>
+            <xsl:attribute name="rx"><xsl:value-of select="@rx"/></xsl:attribute>
+            <xsl:attribute name="ry"><xsl:value-of select="@ry"/></xsl:attribute>
+          </ellipse>
+        </xsl:for-each>
+      </body>
+    </html>
+  </xsl:template>
+
+</xsl:stylesheet> 
