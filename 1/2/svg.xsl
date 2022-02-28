@@ -5,6 +5,7 @@
   <xsl:template match="root/графика">
     <html>
       <body>
+        <h4 id="author" title="GossJS">Ким Артур</h4>  
         <svg xmlns="http://www.w3.org/2000/svg">
           <xsl:attribute name="width"><xsl:value-of select="@ширина"/></xsl:attribute>
           <xsl:attribute name="height"><xsl:value-of select="@высота"/></xsl:attribute>
