@@ -5,7 +5,7 @@
   <xsl:template match="/">
     <html>
       <body>
-        <h4 id="author" title="GossJS">Ким Артур</h4>        
+        <h4 id="author" title="GossJS">Arthur Kim</h4>        
         <math xmlns="http://www.w3.org/2000/Math/MathML" version="1.0" display='block'>
           <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
